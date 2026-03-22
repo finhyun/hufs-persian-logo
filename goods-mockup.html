@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>굿즈 예시 도안</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif+KR:wght@400;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: #F0F0F0; }
+
+  .page {
+    width: 1200px;
+    margin: 2rem auto;
+    background: white;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+
+  .page-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #002B49;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .page-sub {
+    font-size: 0.75rem;
+    color: #999;
+    text-align: center;
+    letter-spacing: 0.2em;
+    margin-bottom: 3rem;
+  }
+
+  .mockup-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .mockup-item {
+    border-radius: 16px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    position: relative;
+  }
+
+  .mockup-label {
+    position: absolute;
+    bottom: 16px;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* 과잠 — 그레이 */
+  .hoodie {
+    background: #C4C1BC;
+    border-radius: 16px;
+  }
+  .hoodie .logo-area {
+    width: 140px;
+    margin-bottom: 1rem;
+  }
+  .hoodie .text-area {
+    text-align: center;
+    color: #002B49;
+  }
+  .hoodie .text-area .t1 {
+    font-size: 0.5rem;
+    letter-spacing: 0.4em;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+  }
+  .hoodie .text-area .t2 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.15rem;
+  }
+  .hoodie .text-area .t3 {
+    font-size: 0.4rem;
+    letter-spacing: 0.3em;
+    opacity: 0.5;
+  }
+  .hoodie .mockup-label { color: rgba(0,43,73,0.3); }
+
+  /* 에코백 — 크림 */
+  .ecobag {
+    background: #E8E2D6;
+  }
+  .ecobag .logo-area { width: 160px; }
+  .ecobag .mockup-label { color: rgba(0,43,73,0.3); }
+
+  /* 블랙 후디 */
+  .hoodie-black {
+    background: #1A1A1A;
+  }
+  .hoodie-black .logo-area {
+    width: 140px;
+    filter: brightness(0) invert(1);
+  }
+  .hoodie-black .text-area {
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .hoodie-black .text-area .t1 {
+    font-size: 0.5rem;
+    letter-spacing: 0.4em;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+  }
+  .hoodie-black .text-area .t2 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.15rem;
+  }
+  .hoodie-black .text-area .t3 {
+    font-size: 0.4rem;
+    letter-spacing: 0.3em;
+    opacity: 0.4;
+  }
+  .hoodie-black .mockup-label { color: rgba(255,255,255,0.2); }
+
+  /* 네이비 후디 */
+  .hoodie-navy {
+    background: #002B49;
+  }
+  .hoodie-navy .logo-area {
+    width: 140px;
+    filter: brightness(0) invert(1);
+  }
+  .hoodie-navy .text-area {
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .hoodie-navy .text-area .t1 {
+    font-size: 0.5rem;
+    letter-spacing: 0.4em;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+  }
+  .hoodie-navy .text-area .t2 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.15rem;
+  }
+  .hoodie-navy .text-area .t3 {
+    font-size: 0.4rem;
+    letter-spacing: 0.3em;
+    opacity: 0.4;
+  }
+  .hoodie-navy .mockup-label { color: rgba(255,255,255,0.2); }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <h1 class="page-title">굿즈 예시 도안</h1>
+  <p class="page-sub">페르시아어·이란학과 50주년 로고 적용</p>
+
+  <!-- ROW 1: 과잠 그레이 + 에코백 -->
+  <div class="mockup-row">
+    <div class="mockup-item hoodie">
+      <img class="logo-area" src="logo-final.png" alt="logo">
+      <div class="text-area">
+        <p class="t1">PERSIAN AND IRANIAN STUDIES</p>
+        <p class="t2">페르시아어·이란학과</p>
+        <p class="t3">HANKUK UNIV. OF FOREIGN STUDIES · EST. 1976</p>
+      </div>
+      <span class="mockup-label">HOODIE — HEATHER GRAY</span>
+    </div>
+
+    <div class="mockup-item ecobag">
+      <img class="logo-area" src="logo-final.png" alt="logo">
+      <span class="mockup-label">ECO BAG — NATURAL</span>
+    </div>
+  </div>
+
+  <!-- ROW 2: 블랙 후디 + 네이비 후디 -->
+  <div class="mockup-row">
+    <div class="mockup-item hoodie-black">
+      <img class="logo-area" src="logo-final.png" alt="logo">
+      <div class="text-area">
+        <p class="t1">PERSIAN AND IRANIAN STUDIES</p>
+        <p class="t2">페르시아어·이란학과</p>
+        <p class="t3">HANKUK UNIV. OF FOREIGN STUDIES · EST. 1976</p>
+      </div>
+      <span class="mockup-label">HOODIE — BLACK</span>
+    </div>
+
+    <div class="mockup-item hoodie-navy">
+      <img class="logo-area" src="logo-final.png" alt="logo">
+      <div class="text-area">
+        <p class="t1">PERSIAN AND IRANIAN STUDIES</p>
+        <p class="t2">페르시아어·이란학과</p>
+        <p class="t3">HANKUK UNIV. OF FOREIGN STUDIES · EST. 1976</p>
+      </div>
+      <span class="mockup-label">HOODIE — NAVY</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

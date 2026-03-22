@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>페르시아어·이란학과 — 50주년 로고</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@300;400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+  :root{--navy:#002B49;--black:#0e0e0e;--white:#fff;--cream:#F5F0E8;--warm:#FAFAF8;--gray:#999;--light:#E8E5E0;--gold:#C5A55A;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Noto Sans KR',sans-serif;background:var(--warm);color:var(--navy);-webkit-font-smoothing:antialiased;}
+
+  .sec{max-width:900px;margin:0 auto;padding:5rem 2rem;}
+  .sec-label{font-family:'Inter';font-size:.6rem;font-weight:600;letter-spacing:.45em;text-transform:uppercase;color:var(--gray);margin-bottom:1.2rem;}
+  .sec h2{font-family:'Noto Serif KR';font-size:1.35rem;font-weight:700;margin-bottom:1rem;line-height:1.5;}
+  .sec p{font-size:.92rem;color:#555;line-height:2;margin-bottom:1rem;}
+  .divider{max-width:900px;margin:0 auto;height:1px;background:var(--light);}
+
+  /* HERO */
+  .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--white);text-align:center;padding:3rem 2rem;}
+  .hero img{width:min(50vw,360px);margin-bottom:3rem;opacity:0;animation:fadeIn 1.5s ease .2s forwards;}
+  .hero h1{font-family:'Noto Serif KR';font-size:clamp(1.6rem,4vw,2.6rem);font-weight:900;letter-spacing:.06em;opacity:0;animation:fadeUp 1s ease .7s forwards;}
+  .hero .eng{font-family:'Cormorant Garamond';font-size:clamp(.85rem,1.8vw,1.1rem);font-style:italic;color:var(--gray);letter-spacing:.2em;margin-top:.5rem;opacity:0;animation:fadeUp 1s ease .9s forwards;}
+  .hero .rule{width:40px;height:1px;background:var(--navy);margin:1.5rem auto;opacity:0;animation:fadeUp 1s ease 1s forwards;}
+  .hero .sub{font-family:'Inter';font-size:.65rem;letter-spacing:.3em;color:var(--gray);opacity:0;animation:fadeUp 1s ease 1.1s forwards;}
+
+  /* GOODS */
+  .goods-sec{background:var(--black);padding:5rem 2rem;color:var(--white);}
+  .goods-inner{max-width:1000px;margin:0 auto;}
+  .goods-sec .sec-label{color:rgba(255,255,255,.25);}
+  .goods-sec h2{color:var(--white);font-family:'Noto Serif KR';font-size:1.3rem;margin-bottom:2rem;}
+  .goods-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+  .goods-card{border-radius:16px;overflow:hidden;background:#1a1a1a;}
+  .goods-card img{width:100%;height:auto;display:block;}
+  .goods-card .caption{padding:1rem 1.2rem;font-family:'Inter';font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.35);}
+
+  .goods-full{border-radius:16px;overflow:hidden;background:#1a1a1a;margin-bottom:1.5rem;}
+  .goods-full img{width:100%;height:auto;display:block;}
+  .goods-full .caption{padding:1rem 1.2rem;font-family:'Inter';font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.35);}
+
+  /* LOCKUP */
+  .lockup-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2rem 0;}
+  .lockup-card{border-radius:16px;padding:3rem 2rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:320px;}
+  .lockup-card img{width:140px;margin:1rem 0;}
+  .lockup-card .lk-top{font-family:'Inter';font-size:.55rem;font-weight:500;letter-spacing:.5em;text-transform:uppercase;}
+  .lockup-card .lk-kr{font-family:'Noto Serif KR';font-size:1rem;font-weight:700;letter-spacing:.1em;margin:.3rem 0;}
+  .lockup-card .lk-est{font-family:'Cormorant Garamond';font-size:.65rem;letter-spacing:.4em;opacity:.4;}
+  .lockup-card .lk-univ{font-family:'Inter';font-size:.45rem;letter-spacing:.4em;text-transform:uppercase;opacity:.3;margin-top:.3rem;}
+  .lc-white{background:var(--white);border:1px solid var(--light);}
+  .lc-white *{color:var(--navy);}
+  .lc-cream{background:var(--cream);}
+  .lc-cream *{color:var(--navy);}
+  .lc-black{background:var(--black);}
+  .lc-black *{color:var(--gold);}
+  .lc-navy{background:var(--navy);}
+  .lc-navy *{color:var(--gold);}
+
+  /* MEANING */
+  .m-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:2rem 0;}
+  .m-card{padding:1.6rem;background:var(--white);border-radius:12px;border:1px solid var(--light);}
+  .m-card h3{font-size:.9rem;margin-bottom:.4rem;}
+  .m-card p{font-size:.8rem;color:var(--gray);margin-bottom:0;line-height:1.8;}
+
+  /* STORY */
+  .story-sec{background:var(--navy);color:var(--cream);padding:5rem 2rem;}
+  .story-inner{max-width:680px;margin:0 auto;}
+  .story-sec .sec-label{color:rgba(245,240,232,.3);}
+  .story-sec h2{font-family:'Noto Serif KR';color:var(--cream);font-size:1.3rem;margin-bottom:2rem;}
+  .story-sec p{color:rgba(245,240,232,.7);font-size:.92rem;line-height:2.2;margin-bottom:1.3rem;}
+  .story-sec strong{color:var(--cream);}
+
+  .footer{text-align:center;padding:3rem;font-family:'Inter';font-size:.55rem;color:var(--gray);letter-spacing:.2em;}
+
+  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+  @media(max-width:768px){.goods-grid,.lockup-grid,.m-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="logo-final-transparent.png" alt="logo">
+  <h1>페르시아어 · 이란학과</h1>
+  <p class="eng">Department of Persian Language &amp; Iranian Studies</p>
+  <div class="rule"></div>
+  <p class="sub">한국외국어대학교 &mdash; SINCE 1976 &mdash; 50TH ANNIVERSARY</p>
+</section>
+
+<!-- LOGO LOCKUP -->
+<section class="sec">
+  <p class="sec-label">01 &mdash; Logo Lockup</p>
+  <h2>학과명 포함 풀 디자인</h2>
+  <div class="lockup-grid">
+    <div class="lockup-card lc-white">
+      <p class="lk-top">PERSIAN AND IRANIAN STUDIES</p>
+      <img src="logo-final-transparent.png" alt="">
+      <p class="lk-kr">페르시아어·이란학과</p>
+      <p class="lk-est">&mdash; EST. 1976 &mdash;</p>
+      <p class="lk-univ">HANKUK UNIVERSITY OF FOREIGN STUDIES</p>
+    </div>
+    <div class="lockup-card lc-black">
+      <p class="lk-top">PERSIAN AND IRANIAN STUDIES</p>
+      <img src="logo-final-gold.png" alt="">
+      <p class="lk-kr">페르시아어·이란학과</p>
+      <p class="lk-est">&mdash; EST. 1976 &mdash;</p>
+      <p class="lk-univ">HANKUK UNIVERSITY OF FOREIGN STUDIES</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONCEPT -->
+<section class="sec">
+  <p class="sec-label">02 &mdash; Design Concept</p>
+  <h2>ف &times; سیمرغ &mdash; 글자가 곧 새, 새가 곧 글자</h2>
+  <p>페르시아어의 첫 글자 ف(파)의 캘리그래피 곡선이 이란 신화 속 지혜의 새 시무르그의 형상이 됩니다. 글자를 보면 새가 보이고, 새를 보면 글자가 보입니다.</p>
+  <div class="m-grid">
+    <div class="m-card">
+      <h3>ف &mdash; 페르시아어의 시작</h3>
+      <p>فارسی(Farsi)의 첫 글자. 모든 학생이 처음 배우는 문자이자 여정의 출발점.</p>
+    </div>
+    <div class="m-card">
+      <h3>시무르그 &mdash; 지혜의 새</h3>
+      <p>페르시아 신화에서 지혜·치유·풍요를 상징하는 전설의 새. 자아 발견의 메타포.</p>
+    </div>
+    <div class="m-card">
+      <h3>하나의 형태</h3>
+      <p>글자와 새가 분리되지 않는 통합 구성. 언어를 배우면 그 문화 안에 들어가게 됩니다.</p>
+    </div>
+    <div class="m-card">
+      <h3>새들의 회의</h3>
+      <p>30마리 새(سی مرغ)가 시무르그를 찾아 떠나지만, 발견한 건 자기 자신이었습니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GOODS MOCKUPS -->
+<section class="goods-sec">
+  <div class="goods-inner">
+    <p class="sec-label">03 &mdash; Goods Application</p>
+    <h2>굿즈 적용 예시</h2>
+
+    <!-- 과잠 풀 -->
+    <div class="goods-full">
+      <img src="goods/varsity-jacket.png" alt="과잠">
+      <div class="caption">과잠 (Varsity Jacket) &mdash; 앞뒤 도안</div>
+    </div>
+
+    <div class="goods-grid">
+      <div class="goods-card">
+        <img src="goods/hoodie-black-gold.png" alt="후드티 블랙골드">
+        <div class="caption">후드티 &mdash; Black &times; Gold</div>
+      </div>
+      <div class="goods-card">
+        <img src="goods/hoodie-gray.png" alt="후드티 그레이">
+        <div class="caption">후드티 &mdash; Heather Gray</div>
+      </div>
+    </div>
+
+    <div class="goods-grid" style="margin-top:1.5rem;">
+      <div class="goods-card">
+        <img src="goods/hoodie-gray-kr.jpg" alt="후드티 그레이 한국어">
+        <div class="caption">후드티 &mdash; Gray (Korean text)</div>
+      </div>
+      <div class="goods-card" style="background:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3rem;min-height:300px;">
+        <img src="logo-final-gold.png" alt="에코백" style="width:150px;">
+        <div class="caption" style="color:rgba(197,165,90,.4);">에코백 적용 예시</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- STORYTELLING -->
+<section class="story-sec">
+  <div class="story-inner">
+    <p class="sec-label">04 &mdash; Storytelling</p>
+    <h2>시무르그를 찾아서</h2>
+
+    <p>저는 원래 지리를 좋아하는 학생이었습니다. 한국지리, 세계지리 수업이 가장 재미있었고, 중국어로 HSK 급수를 따고 스페인어를 독학할 정도로 새로운 언어에도 관심이 많았습니다. 재수할 때 사회탐구 공부 시간을 줄이고 싶어서 제2외국어로 아랍어를 선택했는데, 처음 보는 글자들이 이상하게 손에 잘 맞았습니다. 단어의 어감도 좋았고, 완전히 새로운 문자를 배운다는 것 자체가 즐거웠습니다. 그때 확실히 알았습니다 — 저는 언어를 배우는 일 자체가 좋은 사람이라는 것을.</p>
+
+    <p>아랍어를 공부하면서 자연스럽게 중동 지역에 관심이 생겼고, 관련 학과들을 찾아보다가 페르시아어·이란학과라는 곳이 있다는 걸 알게 되었습니다. 세계지리 시간에 배운 이란이 떠올랐습니다. 석유와 천연가스가 풍부하고 인구도 8천만이 넘는데, 미국의 제재 때문에 시장이 열리지 않은 나라. 제재만 풀리면 무궁무진한 가능성이 있겠다는 생각에 아랍어가 아닌 이란어과를 선택했습니다.</p>
+
+    <p>막상 페르시아어를 배우기 시작하니 예상과 다른 점들이 많았습니다. 어순이 한국어와 완전히 같아서 배우기가 수월했고, 아랍어를 먼저 배운 덕분에 발음만 다를 뿐 비슷한 단어들이 꽤 있어서 재미가 붙었습니다. 여러 수업 중에서 이란뉴스읽기와 페르시아문학개론이 가장 인상 깊었습니다. 뉴스를 직접 읽으니 그 나라의 문화, 공식적으로 쓰이는 표현, 실제 상황을 훨씬 구체적으로 파악할 수 있었고, 문학을 배우면서 제가 생각했던 것보다 훨씬 깊고 오래된 전통이 있다는 걸 알게 되었습니다. 친형이 영화감독을 꿈꾸는데, 형도 이란하면 영화와 문학이 유명하다는 걸 알고 있었습니다. 형이 아는 그 세계를 저는 원어로 직접 경험하고 있다는 사실이 소속감을 느끼게 해줬습니다. 학과가 특이하다 보니 주위에서 이란 관련 뉴스가 나오면 저한테 먼저 물어봤고, 설명해주면 신기해하는 반응을 보면서 자신감이 생겼습니다.</p>
+
+    <p><strong>이 로고에는 그 경험이 들어 있습니다.</strong> 페르시아어의 첫 글자 ف(파)의 곡선이 이란 신화 속 지혜의 새 시무르그의 형상이 됩니다. 글자를 보면 새가 보이고, 새를 보면 글자가 보입니다. 12세기 시인 아타르의 「새들의 회의」에서 서른 마리 새는 전설의 왕 시무르그를 찾아 떠나지만, 여정 끝에서 발견한 것은 자기 자신이었습니다. 시무르그(سی مرغ)가 페르시아어로 '서른 마리 새'라는 뜻이기 때문입니다.</p>
+
+    <p>이 로고가 과잠이나 에코백에 새겨졌을 때, 누군가 "이거 뭐야?"라고 물어봐 주었으면 합니다. 그 질문 하나가 페르시아어라는 언어로, 이란이라는 나라로 이어지는 입구가 될 수 있습니다. 1976년부터 50년간 이 학과를 거쳐 간 모든 분들이 각자의 이유로 이곳에 왔고, 각자의 방식으로 이란을 알아갔을 것입니다. 이 로고가 앞으로의 50년에도 그 시작점이 되기를 바랍니다.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  한국외국어대학교 페르시아어·이란학과 &mdash; 창립 50주년 로고 공모전 &mdash; 2026
+</footer>
+
+</body>
+</html>

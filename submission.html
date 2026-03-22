@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>페르시아어·이란학과 50주년 로고 — 공모전 제출</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@300;400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+
+  :root {
+    --navy: #002B49;
+    --black: #0e0e0e;
+    --white: #fff;
+    --cream: #F5F0E8;
+    --warm: #FAFAF8;
+    --gray: #999;
+    --light: #E8E5E0;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Noto Sans KR',sans-serif; background:var(--warm); color:var(--navy); -webkit-font-smoothing:antialiased; }
+
+  /* util */
+  .sec { max-width:900px; margin:0 auto; padding:5rem 2rem; }
+  .sec-label { font-family:'Inter',sans-serif; font-size:.6rem; font-weight:600; letter-spacing:.45em; text-transform:uppercase; color:var(--gray); margin-bottom:1.2rem; }
+  .sec h2 { font-family:'Noto Serif KR',serif; font-size:1.35rem; font-weight:700; margin-bottom:1rem; line-height:1.5; }
+  .sec p { font-size:.92rem; color:#555; line-height:2; margin-bottom:1rem; }
+  .divider { max-width:900px; margin:0 auto; height:1px; background:var(--light); }
+
+  /* hero */
+  .hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; background:var(--white); text-align:center; padding:3rem 2rem; }
+  .hero img { width:min(50vw,360px); margin-bottom:3rem; opacity:0; animation:fadeIn 1.5s ease .2s forwards; }
+  .hero h1 { font-family:'Noto Serif KR',serif; font-size:clamp(1.6rem,4vw,2.6rem); font-weight:900; letter-spacing:.06em; opacity:0; animation:fadeUp 1s ease .7s forwards; }
+  .hero .eng { font-family:'Cormorant Garamond',serif; font-size:clamp(.85rem,1.8vw,1.1rem); font-style:italic; color:var(--gray); letter-spacing:.2em; margin-top:.5rem; opacity:0; animation:fadeUp 1s ease .9s forwards; }
+  .hero .rule { width:40px; height:1px; background:var(--navy); margin:1.5rem auto; opacity:0; animation:fadeUp 1s ease 1s forwards; }
+  .hero .sub { font-family:'Inter',sans-serif; font-size:.65rem; letter-spacing:.3em; color:var(--gray); opacity:0; animation:fadeUp 1s ease 1.1s forwards; }
+
+  /* full lockup */
+  .lockup-sec { padding:5rem 2rem; }
+  .lockup-card { max-width:480px; margin:0 auto; text-align:center; padding:4rem 2rem; border-radius:16px; }
+  .lockup-card img { width:200px; margin:1.2rem auto; display:block; }
+  .lockup-card .t1 { font-family:'Inter',sans-serif; font-size:.65rem; font-weight:500; letter-spacing:.5em; text-transform:uppercase; margin-bottom:-.3rem; }
+  .lockup-card .t2 { font-family:'Cormorant Garamond',serif; font-size:.7rem; letter-spacing:.4em; opacity:.5; margin:.6rem 0; }
+  .lockup-card .t3 { font-family:'Inter',sans-serif; font-size:.55rem; letter-spacing:.4em; text-transform:uppercase; opacity:.4; }
+  .lk-white { background:var(--white); border:1px solid var(--light); }
+  .lk-white .t1,.lk-white .t2,.lk-white .t3 { color:var(--navy); }
+  .lk-black { background:var(--black); }
+  .lk-black .t1,.lk-black .t2,.lk-black .t3 { color:var(--white); }
+  .lk-gray { background:#B8B5B0; }
+  .lk-gray .t1,.lk-gray .t2,.lk-gray .t3 { color:var(--navy); }
+
+  .lockup-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.2rem; max-width:900px; margin:2rem auto 0; }
+
+  /* goods */
+  .goods-sec { background:var(--black); padding:5rem 2rem; color:var(--white); }
+  .goods-inner { max-width:900px; margin:0 auto; }
+  .goods-sec .sec-label { color:rgba(255,255,255,.25); }
+  .goods-sec h2 { color:var(--white); }
+  .goods-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:2rem; }
+  .g-card { border-radius:14px; padding:3rem 2rem; display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:350px; position:relative; }
+  .g-card img { width:110px; margin-bottom:1rem; }
+  .g-card .info { text-align:center; }
+  .g-card .info .l1 { font-family:'Inter'; font-size:.42rem; letter-spacing:.5em; font-weight:500; margin-bottom:3px; }
+  .g-card .info .l2 { font-family:'Noto Serif KR'; font-size:.75rem; font-weight:700; letter-spacing:.1em; margin-bottom:2px; }
+  .g-card .info .l3 { font-family:'Inter'; font-size:.33rem; letter-spacing:.3em; opacity:.45; }
+  .g-label { position:absolute; bottom:12px; font-family:'Inter'; font-size:.5rem; letter-spacing:.2em; text-transform:uppercase; font-weight:500; }
+
+  .g-heather { background:#C4C1BC; }
+  .g-heather .info { color:var(--navy); }
+  .g-heather .g-label { color:rgba(0,43,73,.3); }
+
+  .g-dark { background:#1a1a1a; }
+  .g-dark img { }
+  .g-dark .info { color:var(--white); }
+  .g-dark .g-label { color:rgba(255,255,255,.2); }
+
+  .g-eco { background:#E5DECE; }
+  .g-eco .g-label { color:rgba(0,43,73,.3); }
+
+  .g-navy-card { background:var(--navy); }
+  .g-navy-card img { }
+  .g-navy-card .info { color:var(--white); }
+  .g-navy-card .g-label { color:rgba(255,255,255,.2); }
+
+  /* application */
+  .app-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.2rem; margin-top:2rem; }
+  .app-card { background:var(--white); border:1px solid var(--light); border-radius:14px; padding:2rem; min-height:280px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.8rem; position:relative; }
+  .app-card img { width:55px; }
+  .app-card h4 { font-size:.8rem; font-weight:600; }
+  .app-card p { font-size:.7rem; color:var(--gray); text-align:center; line-height:1.5; }
+
+  /* banner mockup */
+  .banner-mock { background:var(--navy); border-radius:14px; padding:2.5rem 3rem; display:flex; align-items:center; gap:2rem; margin-top:1.5rem; }
+  .banner-mock img { width:70px; }
+  .banner-mock .bt h3 { font-family:'Noto Serif KR'; font-size:1.1rem; font-weight:700; color:var(--white); margin-bottom:.3rem; }
+  .banner-mock .bt p { font-size:.6rem; color:rgba(255,255,255,.5); letter-spacing:.15em; }
+
+  /* sns mockup */
+  .sns-mock { background:var(--white); border:1px solid var(--light); border-radius:14px; padding:2rem; display:flex; flex-direction:column; align-items:center; gap:.7rem; }
+  .sns-avatar { width:70px; height:70px; border-radius:50%; background:var(--navy); display:flex; align-items:center; justify-content:center; }
+  .sns-avatar img { width:42px; }
+  .sns-name { font-size:.8rem; font-weight:700; }
+  .sns-handle { font-size:.65rem; color:var(--gray); }
+
+  /* story */
+  .story-sec { background:var(--navy); color:var(--cream); padding:5rem 2rem; }
+  .story-inner { max-width:680px; margin:0 auto; }
+  .story-sec .sec-label { color:rgba(245,240,232,.3); }
+  .story-sec h2 { font-family:'Noto Serif KR'; color:var(--cream); font-size:1.3rem; margin-bottom:2rem; }
+  .story-sec p { color:rgba(245,240,232,.7); font-size:.92rem; line-height:2.2; margin-bottom:1.3rem; }
+  .story-sec strong { color:var(--cream); }
+  .story-sec blockquote { border-left:2px solid rgba(245,240,232,.15); padding-left:1.5rem; margin:1.5rem 0; font-style:italic; color:rgba(245,240,232,.45); font-size:.92rem; }
+
+  /* meaning */
+  .m-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin:2rem 0; }
+  .m-card { padding:1.6rem; background:var(--white); border-radius:12px; border:1px solid var(--light); }
+  .m-card h3 { font-size:.9rem; margin-bottom:.4rem; }
+  .m-card p { font-size:.8rem; color:var(--gray); margin-bottom:0; line-height:1.8; }
+
+  .footer { text-align:center; padding:3rem; font-family:'Inter'; font-size:.55rem; color:var(--gray); letter-spacing:.2em; }
+
+  @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+  @media(max-width:768px) { .lockup-grid,.goods-grid,.app-grid,.m-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero">
+  <img src="logo-final-transparent.png" alt="페르시아어·이란학과 로고">
+  <h1>페르시아어 · 이란학과</h1>
+  <p class="eng">Department of Persian Language &amp; Iranian Studies</p>
+  <div class="rule"></div>
+  <p class="sub">한국외국어대학교 &mdash; SINCE 1976 &mdash; 50TH ANNIVERSARY</p>
+</section>
+
+<!-- ═══════════ FULL LOCKUP ═══════════ -->
+<section class="lockup-sec" style="background:var(--white);">
+  <div class="sec" style="padding-bottom:1rem;">
+    <p class="sec-label">01 — Full Lockup</p>
+    <h2>학과명 포함 풀 디자인</h2>
+  </div>
+  <div class="lockup-grid">
+    <div class="lockup-card lk-white">
+      <p class="t1">PERSIAN AND IRANIAN STUDIES</p>
+      <img src="logo-final-transparent.png" alt="">
+      <p class="t2">&mdash; EST. 1976 &mdash;</p>
+      <p class="t3">HANKUK UNIVERSITY OF FOREIGN STUDIES</p>
+    </div>
+    <div class="lockup-card lk-black">
+      <p class="t1" style="color:#C5A55A;">PERSIAN AND IRANIAN STUDIES</p>
+      <img src="logo-final-gold.png" alt="">
+      <p class="t2" style="color:#C5A55A;">&mdash; EST. 1976 &mdash;</p>
+      <p class="t3" style="color:#C5A55A;opacity:.6;">HANKUK UNIVERSITY OF FOREIGN STUDIES</p>
+    </div>
+    <div class="lockup-card lk-gray">
+      <p class="t1">PERSIAN AND IRANIAN STUDIES</p>
+      <img src="logo-final-transparent.png" alt="">
+      <p class="t2">&mdash; EST. 1976 &mdash;</p>
+      <p class="t3">HANKUK UNIVERSITY OF FOREIGN STUDIES</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════ CONCEPT ═══════════ -->
+<section class="sec">
+  <p class="sec-label">02 — Design Concept</p>
+  <h2>ف &times; سیمرغ &mdash; 글자가 곧 새, 새가 곧 글자</h2>
+  <p>
+    페르시아어의 첫 글자 <strong>ف(파)</strong>의 유려한 곡선이
+    이란 신화의 지혜의 새 <strong>시무르그(سیمرغ)</strong>의 몸체가 됩니다.
+    새의 가슴이 ف의 둥근 획을, 목이 세로 획을, 머리 장식이 점을 대체합니다.
+    글자를 떼면 새가 보이고, 새를 떼면 글자가 보입니다.
+  </p>
+  <div class="m-grid">
+    <div class="m-card">
+      <h3>ف &mdash; 페르시아어의 시작</h3>
+      <p>فارسی(Farsi)의 첫 글자. 모든 학생이 처음 배우는 문자이자 여정의 출발점.</p>
+    </div>
+    <div class="m-card">
+      <h3>시무르그 &mdash; 지혜의 새</h3>
+      <p>페르시아 신화에서 지혜·치유·풍요를 상징. "새들의 회의"에서 자아 발견의 메타포.</p>
+    </div>
+    <div class="m-card">
+      <h3>하나의 형태</h3>
+      <p>글자와 새가 분리되지 않는 통합 구성. 언어를 배우는 것이 곧 문화를 이해하는 것.</p>
+    </div>
+    <div class="m-card">
+      <h3>나스탈리크 곡선</h3>
+      <p>500년 전통의 페르시아 서예에서 영감. 캘리그래피의 예술성이 살아있는 유려한 선.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ GOODS ═══════════ -->
+<section class="goods-sec">
+  <div class="goods-inner">
+    <p class="sec-label">03 — Goods Application</p>
+    <h2>굿즈 적용 예시</h2>
+    <div class="goods-grid">
+      <!-- 과잠 그레이 -->
+      <div class="g-card g-heather">
+        <img src="logo-final-transparent.png" alt="">
+        <div class="info">
+          <p class="l1">PERSIAN AND IRANIAN STUDIES</p>
+          <p class="l2">페르시아어·이란학과</p>
+          <p class="l3">HANKUK UNIV. OF FOREIGN STUDIES · EST. 1976</p>
+        </div>
+        <span class="g-label">과잠 — HEATHER GRAY</span>
+      </div>
+      <!-- 후디 블랙 -->
+      <div class="g-card g-dark">
+        <img src="logo-final-gold.png" alt="">
+        <div class="info" style="color:#C5A55A;">
+          <p class="l1">PERSIAN AND IRANIAN STUDIES</p>
+          <p class="l2">페르시아어·이란학과</p>
+          <p class="l3" style="opacity:.4;">HANKUK UNIV. OF FOREIGN STUDIES · EST. 1976</p>
+        </div>
+        <span class="g-label">후드티 — BLACK × GOLD</span>
+      </div>
+      <!-- 에코백 -->
+      <div class="g-card g-eco" style="min-height:350px;">
+        <img src="logo-final-transparent.png" alt="" style="width:140px;">
+        <span class="g-label">에코백 — NATURAL</span>
+      </div>
+      <!-- 네이비 -->
+      <div class="g-card g-navy-card">
+        <img src="logo-final-gold.png" alt="">
+        <div class="info" style="color:#C5A55A;">
+          <p class="l1">PERSIAN AND IRANIAN STUDIES</p>
+          <p class="l2">페르시아어·이란학과</p>
+          <p class="l3" style="opacity:.4;">HANKUK UNIV. OF FOREIGN STUDIES · EST. 1976</p>
+        </div>
+        <span class="g-label">과잠 — NAVY × GOLD</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ APPLICATION ═══════════ -->
+<section class="sec">
+  <p class="sec-label">04 — Print &amp; Web Application</p>
+  <h2>인쇄물 · 홍보물 · 웹 적용</h2>
+
+  <!-- 현수막 -->
+  <div class="banner-mock">
+    <img src="logo-final-gold.png" alt="">
+    <div class="bt">
+      <h3 style="color:#C5A55A;">페르시아어·이란학과 창립 50주년</h3>
+      <p style="color:rgba(197,165,90,0.5);">한국외국어대학교 · HANKUK UNIVERSITY OF FOREIGN STUDIES · SINCE 1976</p>
+    </div>
+  </div>
+
+  <div class="app-grid" style="margin-top:1.5rem;">
+    <!-- 공문서 -->
+    <div class="app-card" style="align-items:flex-start;">
+      <div style="display:flex;align-items:center;gap:.8rem;width:100%;padding-bottom:.8rem;border-bottom:2px solid var(--navy);">
+        <img src="logo-final-transparent.png" alt="" style="width:40px;">
+        <div>
+          <div style="font-family:'Noto Serif KR';font-size:.75rem;font-weight:700;">페르시아어·이란학과</div>
+          <div style="font-size:.5rem;color:var(--gray);">DEPT. OF PERSIAN &amp; IRANIAN STUDIES</div>
+        </div>
+      </div>
+      <div style="flex:1;width:100%;margin-top:.8rem;">
+        <div style="height:7px;background:#f0f0f0;border-radius:3px;margin-bottom:.5rem;width:100%;"></div>
+        <div style="height:7px;background:#f0f0f0;border-radius:3px;margin-bottom:.5rem;width:88%;"></div>
+        <div style="height:7px;background:#f0f0f0;border-radius:3px;margin-bottom:.5rem;width:93%;"></div>
+        <div style="height:7px;background:#f0f0f0;border-radius:3px;width:75%;"></div>
+      </div>
+      <p style="font-size:.65rem;font-weight:600;margin-top:auto;color:var(--navy);">공식 문서</p>
+    </div>
+
+    <!-- SNS -->
+    <div class="app-card">
+      <div class="sns-avatar" style="background:#111;"><img src="logo-final-gold.png" alt=""></div>
+      <p class="sns-name">페르시아어·이란학과</p>
+      <p class="sns-handle">@hufs_persian</p>
+      <p style="font-size:.65rem;color:var(--gray);line-height:1.5;text-align:center;">한국외국어대학교<br>EST. 1976</p>
+      <p style="font-size:.65rem;font-weight:600;margin-top:auto;color:var(--navy);">SNS 프로필</p>
+    </div>
+
+    <!-- 스티커 -->
+    <div class="app-card">
+      <div style="display:flex;gap:1rem;align-items:center;">
+        <div style="width:70px;height:70px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;">
+          <img src="logo-final-gold.png" alt="" style="width:42px;">
+        </div>
+        <div style="width:70px;height:70px;border-radius:10px;background:var(--cream);display:flex;align-items:center;justify-content:center;">
+          <img src="logo-final-transparent.png" alt="" style="width:42px;">
+        </div>
+      </div>
+      <p style="font-size:.65rem;font-weight:600;margin-top:auto;color:var(--navy);">스티커 · 씰</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════ STORYTELLING ═══════════ -->
+<section class="story-sec">
+  <div class="story-inner">
+    <p class="sec-label">05 — Storytelling</p>
+    <h2>시무르그를 찾아서</h2>
+
+    <p>이란은 제게 계획에 없던 나라였습니다.</p>
+
+    <p>
+      재수 시절, 아랍어 시험지를 처음 펼쳤을 때
+      오른쪽에서 왼쪽으로 흘러가는 글자들이 어색하기는커녕 손에 착 감겼습니다.
+      그때 알았습니다 — 저는 언어 자체에 끌리는 사람이라는 것을.
+      아랍어에 빠져 중동을 찾아보다 '페르시아어·이란학과'라는 이름과 만났습니다.
+      세계 4위 석유 매장량, 8천만 인구, 그러나 제재로 아직 열리지 않은 시장.
+      머리로 계산하고 이 학과에 들어왔습니다.
+    </p>
+
+    <p>
+      그런데 첫 학기, 페르시아어 수업에서 어순이 한국어와 똑같다는 걸 알았을 때 —
+      계산과는 전혀 다른 감정이 밀려왔습니다.
+      이란뉴스읽기에서 현지 기사를 한 줄씩 해독하며 이란의 오늘을 만졌고,
+      페르시아문학개론에서 하페즈와 루미의 시를 원어로 읽으며
+      천 년 전 페르시아의 밤 안에 서 있는 기분을 느꼈습니다.
+      영화감독이 꿈인 형이 <strong>"이란은 영화도, 문학도 정말 대단한 나라야"</strong>라고
+      했던 말이 그제야 실감 났습니다.
+      원어로 직접 들어간 그 세계는, 전해 듣는 것과 차원이 달랐으니까요.
+    </p>
+
+    <p>
+      어느 순간부터 친구들이 저를 '이란 전문가'라고 부르기 시작했습니다.
+      처음엔 웃었는데, 어느 날 그 말이 자랑스러웠습니다.
+      이 학과에서 보낸 시간은 전공 공부가 아니라, 하나의 문화에 스며드는 일이었습니다.
+    </p>
+
+    <p>
+      <strong>이 로고에는 그 경험이 들어 있습니다.</strong>
+      페르시아어의 첫 글자 ف(파)의 캘리그래피 곡선이
+      이란 신화의 지혜의 새, 시무르그(سیمرغ)의 몸을 이룹니다.
+      글자를 보면 새가 보이고, 새를 보면 글자가 보입니다 —
+      언어를 배우는 일과 문화에 스며드는 일이 결코 분리될 수 없듯이.
+    </p>
+
+    <p>
+      12세기 시인 아타르의 「새들의 회의」에서,
+      서른 마리 새는 전설의 왕 시무르그를 찾아 일곱 계곡을 넘습니다.
+      하지만 여정의 끝에서 그들이 발견한 것은 자기 자신이었습니다.
+      시무르그(سی مرغ) — 페르시아어로 '서른 마리 새'.
+      찾고 있던 것이 곧 자기 자신이었던 것입니다.
+    </p>
+
+    <p>
+      이 로고가 과잠에, 에코백에 새겨졌을 때,
+      누군가 물어봐 주었으면 합니다 — <strong>"이거 뭐야?"</strong>
+      그 한마디가 페르시아어로, 이란이라는 나라로,
+      그 안의 깊은 문화로 이어지는 입구가 될 수 있으니까요.
+    </p>
+
+    <p>
+      1976년부터 50년.
+      이 학과를 거쳐 간 모든 분들이 각자의 계곡을 넘어오셨을 것입니다.
+      <strong>이 한 획이, 앞으로의 여정에도 함께하기를 바랍니다.</strong>
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  한국외국어대학교 페르시아어·이란학과 &mdash; 창립 50주년 로고 공모전 &mdash; 2026
+</footer>
+
+</body>
+</html>

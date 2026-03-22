@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>로고 적용 예시 — 페르시아어·이란학과</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@300;400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+  :root {
+    --navy: #002B49;
+    --black: #111;
+    --white: #fff;
+    --cream: #F5F0E8;
+    --warm: #FAFAF8;
+    --gray: #999;
+    --light: #E8E5E0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans KR', sans-serif; background: #EDEDED; color: var(--navy); }
+
+  /* ── HEADER ── */
+  .header {
+    background: var(--white);
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+    border-bottom: 1px solid var(--light);
+  }
+  .header h1 { font-family: 'Noto Serif KR', serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.3rem; }
+  .header p { font-size: 0.75rem; color: var(--gray); letter-spacing: 0.15em; }
+
+  /* ── SECTION ── */
+  .section {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+  }
+  .section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 1rem;
+  }
+
+  /* ── CARD GRID ── */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; }
+
+  .card {
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .card-label {
+    position: absolute;
+    bottom: 12px; left: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+  }
+  .label-light { background: rgba(255,255,255,0.7); color: var(--navy); }
+  .label-dark { background: rgba(0,0,0,0.4); color: white; }
+
+  /* ── 1. 과잠/후디 ── */
+  .hoodie-gray {
+    background: #C4C1BC;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+  }
+  .hoodie-gray img { width: 120px; margin-bottom: 1rem; }
+  .hoodie-gray .info { text-align: center; color: var(--navy); }
+  .hoodie-gray .info .l1 { font-family: 'Inter'; font-size: 0.45rem; letter-spacing: 0.5em; font-weight: 500; margin-bottom: 4px; }
+  .hoodie-gray .info .l2 { font-family: 'Noto Serif KR'; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; margin-bottom: 2px; }
+  .hoodie-gray .info .l3 { font-family: 'Inter'; font-size: 0.35rem; letter-spacing: 0.35em; opacity: 0.5; }
+
+  .hoodie-black {
+    background: var(--black);
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+  }
+  .hoodie-black img { width: 120px; margin-bottom: 1rem; filter: brightness(0) invert(1); }
+  .hoodie-black .info { text-align: center; color: var(--white); }
+  .hoodie-black .info .l1 { font-family: 'Inter'; font-size: 0.45rem; letter-spacing: 0.5em; font-weight: 500; margin-bottom: 4px; }
+  .hoodie-black .info .l2 { font-family: 'Noto Serif KR'; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; margin-bottom: 2px; }
+  .hoodie-black .info .l3 { font-family: 'Inter'; font-size: 0.35rem; letter-spacing: 0.35em; opacity: 0.4; }
+
+  /* ── 2. 에코백 ── */
+  .ecobag {
+    background: #E5DECE;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+  }
+  .ecobag img { width: 150px; }
+
+  /* ── 3. 스티커 ── */
+  .sticker {
+    background: var(--white);
+    border: 1px solid var(--light);
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .sticker-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .sticker-item img { width: 60px; }
+  .sticker-round {
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sticker-round img { width: 55px; filter: brightness(0) invert(1); }
+  .sticker-sq {
+    width: 90px; height: 90px;
+    border-radius: 12px;
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sticker-sq img { width: 55px; }
+  .sticker-label { font-size: 0.55rem; color: var(--gray); letter-spacing: 0.1em; }
+
+  /* ── 4. 공문서/레터헤드 ── */
+  .letterhead {
+    background: var(--white);
+    border: 1px solid var(--light);
+    min-height: 500px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .lh-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--navy);
+    margin-bottom: 2rem;
+  }
+  .lh-header img { width: 50px; }
+  .lh-header-text h3 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .lh-header-text p {
+    font-size: 0.6rem;
+    color: var(--gray);
+    letter-spacing: 0.1em;
+  }
+  .lh-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .lh-line {
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+  }
+  .lh-line:nth-child(1) { width: 100%; }
+  .lh-line:nth-child(2) { width: 90%; }
+  .lh-line:nth-child(3) { width: 95%; }
+  .lh-line:nth-child(4) { width: 85%; }
+  .lh-line:nth-child(5) { width: 70%; }
+  .lh-footer {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--light);
+    font-size: 0.5rem;
+    color: var(--gray);
+    text-align: center;
+    letter-spacing: 0.15em;
+  }
+
+  /* ── 5. SNS 프로필 ── */
+  .sns {
+    background: var(--white);
+    border: 1px solid var(--light);
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1rem;
+  }
+  .sns-avatar {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sns-avatar img { width: 50px; filter: brightness(0) invert(1); }
+  .sns-name {
+    font-family: 'Noto Sans KR';
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+  .sns-handle {
+    font-size: 0.7rem;
+    color: var(--gray);
+  }
+  .sns-bio {
+    font-size: 0.7rem;
+    color: #666;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  /* ── 6. 현수막/배너 ── */
+  .banner {
+    background: var(--navy);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 3rem;
+  }
+  .banner img { width: 80px; filter: brightness(0) invert(1); }
+  .banner-text { color: var(--white); }
+  .banner-text h3 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+  .banner-text p {
+    font-size: 0.7rem;
+    opacity: 0.6;
+    letter-spacing: 0.15em;
+  }
+
+  /* ── 7. 명함 ── */
+  .namecard {
+    background: var(--white);
+    border: 1px solid var(--light);
+    min-height: 200px;
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .namecard img { width: 45px; }
+  .namecard-info h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 2px; }
+  .namecard-info .dept { font-size: 0.6rem; color: var(--navy); letter-spacing: 0.1em; margin-bottom: 6px; }
+  .namecard-info .contact { font-size: 0.55rem; color: var(--gray); line-height: 1.6; }
+
+  .footer {
+    text-align: center;
+    padding: 3rem;
+    font-size: 0.6rem;
+    color: var(--gray);
+    letter-spacing: 0.15em;
+  }
+
+  @media (max-width: 768px) {
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>로고 적용 예시</h1>
+  <p>홍보물 · 굿즈 · 인쇄물 · 웹</p>
+</div>
+
+<!-- 1. 과잠/후디 -->
+<div class="section">
+  <p class="section-title">01 — 과잠 / 후드티</p>
+  <div class="grid-2">
+    <div class="card hoodie-gray">
+      <img src="logo-final.png" alt="logo">
+      <div class="info">
+        <p class="l1">PERSIAN AND IRANIAN STUDIES</p>
+        <p class="l2">페르시아어·이란학과</p>
+        <p class="l3">HANKUK UNIV. OF FOREIGN STUDIES · EST. 1976</p>
+      </div>
+      <span class="card-label label-light">과잠 — 헤더 그레이</span>
+    </div>
+    <div class="card hoodie-black">
+      <img src="logo-final.png" alt="logo">
+      <div class="info">
+        <p class="l1">PERSIAN AND IRANIAN STUDIES</p>
+        <p class="l2">페르시아어·이란학과</p>
+        <p class="l3">HANKUK UNIV. OF FOREIGN STUDIES · EST. 1976</p>
+      </div>
+      <span class="card-label label-dark">후드티 — 블랙</span>
+    </div>
+  </div>
+</div>
+
+<!-- 2. 에코백 + 스티커 -->
+<div class="section">
+  <p class="section-title">02 — 에코백 / 스티커</p>
+  <div class="grid-2">
+    <div class="card ecobag">
+      <img src="logo-final.png" alt="logo">
+      <span class="card-label label-light">에코백 — 내추럴</span>
+    </div>
+    <div class="card sticker">
+      <div class="sticker-item">
+        <div class="sticker-round"><img src="logo-final.png" alt=""></div>
+        <span class="sticker-label">원형 스티커</span>
+      </div>
+      <div class="sticker-item">
+        <div class="sticker-sq"><img src="logo-final.png" alt=""></div>
+        <span class="sticker-label">사각 스티커</span>
+      </div>
+      <div class="sticker-item">
+        <img src="logo-final.png" alt="" style="width:70px;">
+        <span class="sticker-label">다이컷</span>
+      </div>
+      <span class="card-label label-light">스티커 — 3종</span>
+    </div>
+  </div>
+</div>
+
+<!-- 3. 현수막/배너 -->
+<div class="section">
+  <p class="section-title">03 — 홍보 현수막 / 배너</p>
+  <div class="card banner" style="border-radius: 16px;">
+    <img src="logo-final.png" alt="logo">
+    <div class="banner-text">
+      <h3>페르시아어·이란학과 창립 50주년</h3>
+      <p>한국외국어대학교 · HANKUK UNIVERSITY OF FOREIGN STUDIES · SINCE 1976</p>
+    </div>
+    <span class="card-label label-dark">현수막 / 배너</span>
+  </div>
+</div>
+
+<!-- 4. 공문서 + SNS -->
+<div class="section">
+  <p class="section-title">04 — 인쇄물 / 웹</p>
+  <div class="grid-3">
+    <div class="card letterhead">
+      <div class="lh-header">
+        <img src="logo-final.png" alt="logo">
+        <div class="lh-header-text">
+          <h3>페르시아어·이란학과</h3>
+          <p>DEPT. OF PERSIAN LANGUAGE & IRANIAN STUDIES</p>
+        </div>
+      </div>
+      <div class="lh-body">
+        <div class="lh-line"></div>
+        <div class="lh-line"></div>
+        <div class="lh-line"></div>
+        <div class="lh-line"></div>
+        <div class="lh-line"></div>
+      </div>
+      <div class="lh-footer">한국외국어대학교 페르시아어·이란학과 · 서울 동대문구 이문로 107</div>
+      <span class="card-label label-light">공식 문서 레터헤드</span>
+    </div>
+
+    <div class="card sns">
+      <div class="sns-avatar"><img src="logo-final.png" alt=""></div>
+      <p class="sns-name">페르시아어·이란학과</p>
+      <p class="sns-handle">@hufs_persian</p>
+      <p class="sns-bio">한국외국어대학교<br>Dept. of Persian Language<br>& Iranian Studies<br>EST. 1976</p>
+      <span class="card-label label-light">SNS 프로필</span>
+    </div>
+
+    <div class="card namecard">
+      <img src="logo-final.png" alt="logo">
+      <div class="namecard-info">
+        <h4>홍길동</h4>
+        <p class="dept">페르시아어·이란학과</p>
+        <p class="contact">
+          한국외국어대학교<br>
+          서울 동대문구 이문로 107<br>
+          Tel. 02-2173-xxxx<br>
+          persian@hufs.ac.kr
+        </p>
+      </div>
+      <span class="card-label label-light">명함</span>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  페르시아어·이란학과 창립 50주년 로고 공모전 — 로고 적용 예시 도안
+</div>
+
+</body>
+</html>
