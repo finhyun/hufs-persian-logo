@@ -29,6 +29,50 @@
 
   html { scroll-behavior: smooth; }
 
+  /* NAV BAR */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    height: 48px;
+    background: rgba(14, 14, 14, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(245, 240, 232, 0.06);
+    transition: background 0.3s ease;
+  }
+  .navbar-brand {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .navbar-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .navbar-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    color: rgba(245, 240, 232, 0.4);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+  }
+  .navbar-links a:hover { color: var(--gold); }
+
   body {
     font-family: 'Noto Sans KR', sans-serif;
     background: var(--bg);
@@ -648,6 +692,17 @@
 </style>
 </head>
 <body>
+
+<!-- TOP NAV BAR -->
+<nav class="navbar">
+  <a href="#hero" class="navbar-brand">페르시아어·이란학과</a>
+  <ul class="navbar-links">
+    <li><a href="#hero">Logo</a></li>
+    <li><a href="#concept">Concept</a></li>
+    <li><a href="#goods">Goods</a></li>
+    <li><a href="#story">Story</a></li>
+  </ul>
+</nav>
 
 <!-- SIDE NAVIGATION DOTS -->
 <nav class="side-nav" id="sideNav" aria-label="Section navigation">
